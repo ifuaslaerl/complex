@@ -1,40 +1,40 @@
-# Complex
+# Grafical
 
-**Complex** é uma ferramenta Python para visualização de funções complexas. Ela gera:
-- **Diagramas de Bode**: Resposta em frequência 2D (Magnitude e Fase).
-- **Superfícies de Laplace**: Visualizações 3D da magnitude sobre o plano complexo, coloridas pela fase.
+**Grafical** is a Python tool for visualizing complex functions. It generates:
+- **Bode Plots**: 2D frequency response (Magnitude and Phase).
+- **Laplace Surfaces**: 3D visualizations of magnitude over the complex plane, colored by phase.
 
-## Instalação
+## Installation
 
-Requer Python 3.9+.
+Requires Python 3.9+.
 
 ```bash
 pip install .
 ```
 
-## Criando Suas Próprias Funções
+## Creating Your Own Functions
 
-Para criar uma nova função, herde de `ComplexFunction` e implemente o método `f`. Note que `f` agora é um método de instância e deve aceitar `self`.
+To create a new function, inherit from `ComplexFunction` and implement the `f` method. Note that `f` is now an instance method and must accept `self`.
 
 ```python
 import overrides
-from complex_function import ComplexFunction
+from grafical import ComplexFunction
 
-class MinhaFuncao(ComplexFunction):
+class MyFunction(ComplexFunction):
     @overrides.overrides
     def f(self, s: complex) -> complex:
-        # Exemplo: 1 / (s + 1)
+        # Example: 1 / (s + 1)
         return 1 / (s + 1)
 
 if __name__ == "__main__":
-    # Instancia a função com resolução definida
-    funcao = MinhaFuncao(resolution=1000, real_range=(-10, 10), imag_range=(-10, 10))
+    # Instantiate the function with defined resolution
+    func = MyFunction(resolution=1000, real_range=(-10, 10), imag_range=(-10, 10))
     
-    # Gera os gráficos
-    funcao.plot_bode()
-    funcao.plot_laplace(mesh_resolution=60)
+    # Generate the plots
+    func.plot_bode()
+    func.plot_laplace(mesh_resolution=60)
 ```
 
-## Estrutura do Projeto
+## Project Structure
 
-- `src/grafical/core.py`: Classe base `ComplexFunction` e lógica de plotagem.
+- `src/grafical/core.py`: Base class `ComplexFunction` and plotting logic.
