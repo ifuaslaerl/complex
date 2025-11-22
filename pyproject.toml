@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grafical"
+version = "0.1.0"
+description = "A visualization tool for complex functions featuring Bode plots and Laplace 3D surfaces."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Your Name", email = "your.email@example.com"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "overrides",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/grafical"
+"Bug Tracker" = "https://github.com/yourusername/grafical/issues"
+
+# This automatically finds the package in src/grafical
+[tool.setuptools.packages.find]
+where = ["src"]
