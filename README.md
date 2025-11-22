@@ -18,7 +18,7 @@ Para criar uma nova função, herde de `ComplexFunction` e implemente o método 
 
 ```python
 import overrides
-from grafical import ComplexFunction
+from complex_function import ComplexFunction
 
 class MinhaFuncao(ComplexFunction):
     @overrides.overrides
