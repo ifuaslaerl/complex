@@ -1,6 +1,6 @@
-# Complex
+# complex
 
-**Complex** is a Python tool for visualizing complex functions. It generates:
+**complex** is a Python tool for visualizing complex functions. It generates:
 - **Bode Plots**: 2D frequency response (Magnitude and Phase).
 - **Laplace Surfaces**: 3D visualizations of magnitude over the complex plane, colored by phase.
 
